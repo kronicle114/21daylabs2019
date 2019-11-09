@@ -10,13 +10,15 @@ Instructions
 Given an array of volunteer names and an array of neighbourhood names, complete the doorToDoor function so that it returns the number of neighbourhoods each volunteer should visit if the work of going door to door is split evenly amongst them.
 
 Examples
-Input:const volunteers = [
+```javascript
+// Input:
+
+const volunteers = [
       'Sally',
       'Jake',
       'Brian',
       'Hamid'
     ];
-
 
     const neighbourhoods = [
       'Central Valley',
@@ -31,6 +33,7 @@ Input:const volunteers = [
     
 Output:
 2
+```
 
 Hint: We can use JavaScript's handy built-in .length method to get the length of each array! This will help you figure out how many volunteers and how many neighbourhoods there are.
 
@@ -62,3 +65,83 @@ const topic = 'transportation'
 // Output:
 `It's going to be a long road, so we better get moving.`
 ```
+
+## Challenge #3 - Securing the Vote
+Click here to learn how to navigate the code editor
+
+It looks like you've got a hold of your campaign for now. So you've been asked to turn your attention to making sure the election infrastructure is ready to go! Codeville County is using a new e-voting platform to make elections simpler and more secure. We need to test out the software to make sure it's working correctly before Election Day.
+
+Instructions
+When a resident casts their vote, the system will be passed the name of the candidate they voted for and the current standings. It will then update the standings, adding the new vote to the count.
+
+To test the system, we'll need to complete the function castVote(name, votes) that takes in the name of a candidate and an array of tallied votes. The function should return an array with the updated standings.
+
+We will be testing the system with three possible candidates: Tim, Sally and Beth. Each item in the votes array represents the number of votes for a particular candidate:
+
+The first item in the array votes[0] are the votes for Tim
+The second item in the arry votes[1] are the votes for Sally
+The third item in the array votes[2] are the votes for Beth
+For example in this array [0, 2, 1] there are 0 votes for Tim, 2 votes for Sally and 1 vote for Beth.
+
+Examples
+
+```javascript 
+// Input:
+
+    const name = 'Sally';
+    const votes = [
+      0, // Tim
+      2, // Sally
+      1 // Beth
+    ]
+    
+// Output:
+
+    [
+      0, // Tim
+      3, // Sally
+      1 // Beth
+    ]
+// Input:
+
+    const name = 'Tim';
+    const votes = [
+      1, // Tim
+      1, // Sally
+      2 // Beth
+    ];
+    
+// Output:
+
+    [
+      2, // Tim
+      1 // Sally  
+      2 // Beth
+    ]
+
+```
+
+Hint: We'll need to start with an if statement to determine who the vote is for. Once we know that we can use the increment operator (++) to increase votes[0] for Tim, votes[1] for Sally or votes[2] for Beth.
+
+For instance, if name === 'Tim', then we want to increment votes[0]++.
+
+### Challenge #4 - This is How You Remind Me (To Register To Vote)
+Now that you've squashed all the bugs in the city's new voting software, it's time to jump back on the campaign trail. The election is coming up soon! You need to send out reminders to all Codeville citizens to encourage them to vote, but you don't want to spam people who have already registered. Use JavaScript to remove all registered voters from your contact list.
+
+Instructions
+Complete the function registerToVote(name, unregisteredVoters) that takes in the name of a newly registered voter and an array of names of those who have not yet registered to vote. Your function must return an array, with the newly registered voter's name removed.
+
+Examples
+```javascript
+// Input:
+
+    const name = 'Bradley';
+    const unregisteredVoters = ['Jake', 'Alanna', 'Bradley', 'Stephanie'];
+    
+// Output:
+['Jake', 'Alanna', 'Stephanie']
+```
+
+Hint: If we initialize a new empty array within our function, let mailingList = [], we can use a for-loop and an if-statement to push the right names into it.
+
+Or if we're feeling adventurous, let's take a look at JavaScript's filter function. You can see an example of how to remove an item from an array using filter here.
