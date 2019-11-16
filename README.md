@@ -351,6 +351,8 @@ Hint: We can define and create a new object with an object literal. You can chec
 Like in previous challenges, we may need to use JavaScript's handy push() method to add our new object to the cars array.
 
 ## Challenge #10 - SmartParking
+
+:warning: The expected output is a list of list ex= `[[0,1][0,2]]` with x (column) & y (row) coordinates `[x, y]`. The stupid test leads you to believe that you need to return it as a list with strings `["y,x", "y1, x1" ]`. 
 The parking lot in the Codeville Devtropolis Shopping Mall needs an upgrade, and you've decided this is the perfect opportunity to install a smart parking system.
 
 The system will use special parking sensors to keep track of all parking spots and monitor which ones are available. Every time a vehicle enters the parking lot, the system directs them to an available spot for their particular vehicle type, or notifies them that no spots are available.
