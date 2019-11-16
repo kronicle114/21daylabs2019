@@ -7,27 +7,22 @@ const threshold2 = 0.5; // Clean
 
 const checkAir = function (samples, threshold) {
   let numberOfDirtySamples = 0;
+  let pollutionLevel;
   
   samples.forEach( sample => {
     if(sample.toLowerCase() === 'dirty'){
       numberOfDirtySamples++;
     }
   });
-  
-  let pollutionLevel;
-  if(numberOfDirtySamples === 0){ // Avoid a case where numberOfDirtySamples is zero, this will be undefined
+
+  // Avoid a case where numberOfDirtySamples is zero, otherwise pollutionLevel will be undefined
+  if(numberOfDirtySamples === 0){
     pollutionLevel = 0;
   } else {
     pollutionLevel = numberOfDirtySamples / samples.length;
   }
-  
-  if(threshold > pollutionLevel){
-    console.log(`Clean: threshold: ${threshold} < pollutionLevel ${pollutionLevel}`);
-    return 'Clean';
-  } else {
-    console.log(`Polluted threshold: ${threshold} > pollutionLevel ${pollutionLevel}`);
-    return 'Polluted';
-  }
+
+  return threshold > pollutionLevel ? 'Clean' : 'Polluted';
 };
 
 console.log(checkAir(badSamples, threshold1));
