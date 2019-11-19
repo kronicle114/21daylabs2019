@@ -747,3 +747,9 @@ const output2 = {
   blue: 1
 }
 ```
+
+Hint: Make sure to call the countTickets(tickets) function from within the bestOdds() function.
+
+Each ticket count can start at 0. We can start our countTickets() function by creating an object that sets the counts for red, green, and blue to 0.
+
+Because we need to go through the tickets array to look at each ticket, we can use a for-loop to traverse through the array.
