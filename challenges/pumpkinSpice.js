@@ -21,8 +21,23 @@ const output = [1, 1, 1, 48];
 const pumpkinSpice = money => {
   let result = [0,0,0,0];
   // while money >= 0 then calculate how much it can buy pie, then lattes, then macaron
-  
-  //   while()
+  let newBalance = money;
+
+  while (newBalance >= macaron.cost) {
+    if(newBalance >= pie.cost ){
+      newBalance = newBalance - pie.cost;
+      result[0]++;
+      result[3] += pie.spice;
+    } else if(newBalance >= latte.cost ){
+      newBalance = newBalance - latte.cost;
+      result[1]++;
+      result[3] += latte.spice;
+    } else if(newBalance >= macaron.cost ){
+      newBalance = newBalance - macaron.cost;
+      result[2]++;
+      result[3] += macaron.spice;
+    }
+  }
   return result;
 };
 
