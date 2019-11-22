@@ -25,15 +25,15 @@ const pumpkinSpice = money => {
 
   while (newBalance >= macaron.cost) {
     if(newBalance >= pie.cost ){
-      newBalance = newBalance - pie.cost;
+      newBalance -= pie.cost;
       result[0]++;
       result[3] += pie.spice;
     } else if(newBalance >= latte.cost ){
-      newBalance = newBalance - latte.cost;
+      newBalance -= latte.cost;
       result[1]++;
       result[3] += latte.spice;
     } else if(newBalance >= macaron.cost ){
-      newBalance = newBalance - macaron.cost;
+      newBalance -= macaron.cost;
       result[2]++;
       result[3] += macaron.spice;
     }
