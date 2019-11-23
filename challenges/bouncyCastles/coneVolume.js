@@ -1,7 +1,5 @@
 'use strict';
-// Use the value below whenever you need the value of Pi
-const PI = 3.14159;
-
+let pi = require('./constants.js')
 // V=(1/3)πr^2h
 
 const cone = {
@@ -11,7 +9,7 @@ const cone = {
 }
 
 const coneVolume = function (radius, height) {
-    const V=(1/3) * PI * Math.pow(radius, 2) * height
+    const V=(1/3) * pi * Math.pow(radius, 2) * height
     return V
 }
 

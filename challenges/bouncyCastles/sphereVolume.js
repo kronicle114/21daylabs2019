@@ -1,5 +1,5 @@
 'use strict';
-const PI = 3.14159;
+let pi = require('./constants.js')
 // V = ⁴⁄₃πr³
 
 const largeSphere = {
@@ -12,7 +12,7 @@ const smallSphere = {
     radius: 10
 }
 const sphereVolume = function (radius) {
-    const V = (4/3) * PI * Math.pow(radius, 3)
+    const V = (4/3) * pi * Math.pow(radius, 3)
     return V
 };
 
