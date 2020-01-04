@@ -9,7 +9,6 @@ const prism = {
 
 // V=Bh where B is the base area and h is the height
 // The area A of a rectangle with length l and width w is A=lw
-const PI = 3.14159;
 const prismVolume = function (height, width, depth) {
     const B = depth * width
     const V= B * height
